@@ -14,14 +14,22 @@ class HuggingFaceT5(LLM):
         return "custom"
 
     def _call(self, prompt: str, stop: list = None) -> str:
-        prompt = f"Translate this to SQL:\n{prompt}"
+        print(f"[Prompt to T5]: {prompt}")  # Expect: "Question: ...\nSchema: ..."
+
         input_ids = self.tokenizer.encode(
             prompt,
             return_tensors="pt",
             truncation=True,
-            max_length=512  # To avoid overflow errors
+            max_length=512
         )
         output_ids = self.model.generate(input_ids, max_length=128)
-        return self.tokenizer.decode(output_ids[0], skip_special_tokens=True)
+        decoded_output = self.tokenizer.decode(output_ids[0], skip_special_tokens=True).strip()
 
+        if "SELECT" in decoded_output.upper():
+            sql_start = decoded_output.upper().index("SELECT")
+            cleaned = decoded_output[sql_start:]
+        else:
+            cleaned = decoded_output
 
+        print(f"[Cleaned SQL output]: {cleaned}")
+        return cleaned
