@@ -2,7 +2,7 @@ import streamlit as st
 from langchain_gpt_sql import run_query, get_schema_for_tables
 
 # Streamlit page setup
-st.set_page_config(page_title="ReAct SQL Agent", layout="centered")
+st.set_page_config(page_title="NLP SQL Agent", layout="centered")
 st.title("Natural Language to SQL Query")
 
 # User input
