@@ -14,12 +14,23 @@ api_key = os.getenv("OPENAI_API_KEY")
 print(api_key)
 
 # SQL Server connection string
+uid = os.getenv("AZURE_SQL_UID")
+pwd = os.getenv("AZURE_SQL_PWD")
+server = os.getenv("AZURE_SQL_SERVER")
+database = os.getenv("AZURE_SQL_DB")
+
+# Create the connection string
 params = urllib.parse.quote_plus(
-    "DRIVER={ODBC Driver 17 for SQL Server};"
-    "SERVER=LAPTOP-S9P3MUJN;"
-    "DATABASE=Northwind;"
-    "Trusted_Connection=yes"
+    f"Driver={{ODBC Driver 18 for SQL Server}};"
+    f"Server=tcp:{server},1433;"
+    f"Database={database};"
+    f"Uid={uid};"
+    f"Pwd={pwd};"
+    f"Encrypt=yes;"
+    f"TrustServerCertificate=no;"
+    f"Connection Timeout=30;"
 )
+
 engine = create_engine(f"mssql+pyodbc:///?odbc_connect={params}")
 
 # Connect LangChain SQL wrapper
