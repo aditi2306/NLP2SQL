@@ -80,7 +80,4 @@ Developed by [Aditi](https://github.com/aditi2306)
 
 ```
 
----
 
-Let me know if you’d like this saved as a [ready-to-use `README.md` file](f), or want help adding a [sample query walkthrough](f).
-```
