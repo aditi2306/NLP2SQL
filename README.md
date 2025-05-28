@@ -34,8 +34,7 @@ Create a `.env` file in the root directory or set the environment variable:
 OPENAI_API_KEY=your_api_key_here
 
 ```
-### SQL Server Setup (Optional)
-
+### SQL Server Setup 
 To connect to a local SQL Server (e.g., Northwind database), install the **ODBC Driver for SQL Server** and use a connection string like below:
 
 ```python
@@ -78,6 +77,5 @@ streamlit run app.py
 
 Developed by [Aditi](https://github.com/aditi2306)
 
-```
 
 
