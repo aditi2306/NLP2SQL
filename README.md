@@ -33,7 +33,7 @@ Create a `.env` file in the root directory or set the environment variable:
 ```env
 OPENAI_API_KEY=your_api_key_here
 
-
+```
 ### SQL Server Setup (Optional)
 
 To connect to a local SQL Server (e.g., Northwind database), install the **ODBC Driver for SQL Server** and use a connection string like below:
