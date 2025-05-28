@@ -3,7 +3,7 @@
 [![Streamlit App](https://img.shields.io/badge/Streamlit-LiveApp-ff4b4b?logo=streamlit)](https://aditi2306-nlp2sql-app-r0bk17.streamlit.app/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-Powered-10a37f?logo=openai)](https://platform.openai.com/)
 
-NLP2SQL is an interactive Streamlit-based application that translates natural language questions into executable SQL queries. It leverages OpenAI's GPT models and LangChain tools for intelligent query generation, table understanding, and result retrieval.
+NLP2SQL is an interactive Streamlit-based application that translates natural language questions into executable SQL queries. It leverages OpenAI's GPT models and tools for intelligent query generation, table understanding, and result retrieval.
 
 ---
 
