@@ -77,5 +77,7 @@ streamlit run app.py
 
 Developed by [Aditi](https://github.com/aditi2306)
 
+---
+## Demo
 
-
+![Demo Screenshot](nlptosql.jpg)
