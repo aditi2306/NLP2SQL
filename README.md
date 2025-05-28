@@ -25,14 +25,25 @@ Try the app at: [Streamlit App](https://aditi2306-nlp2sql-app-r0bk17.streamlit.a
 Create a .env file in the root directory or set the environment variable:
 OPENAI_API_KEY=your_api_key_here
 
+
+
+To connect to a local SQL Server (e.g., Northwind database), install the ODBC Driver for SQL Server and use a connection string like:
+import urllib
+
+params = urllib.parse.quote_plus(
+    "DRIVER={ODBC Driver 17 for SQL Server};"
+    "SERVER=LAPTOP-S9P3MUJN;"
+    "DATABASE=Northwind;"
+    "Trusted_Connection=yes"
+)
+
+
 ---
 ## Project Structure 
 
 NLP2SQL/
 ├── app.py                 # Main Streamlit application
 ├── sql_generator.py       # NL to SQL logic
-├── utils.py               # Helper functions
-├── sample.csv             # Example dataset
 ├── requirements.txt       # Dependencies
 └── README.md              # Project documentation
 
