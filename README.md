@@ -1,4 +1,4 @@
-````markdown
+
 # NLP2SQL: Natural Language to SQL Query Generator
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-LiveApp-ff4b4b?logo=streamlit)](https://aditi2306-nlp2sql-app-r0bk17.streamlit.app/)
@@ -32,7 +32,7 @@ Create a `.env` file in the root directory or set the environment variable:
 
 ```env
 OPENAI_API_KEY=your_api_key_here
-````
+
 
 ### SQL Server Setup (Optional)
 
