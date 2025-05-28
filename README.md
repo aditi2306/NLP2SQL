@@ -1,9 +1,11 @@
 # NLP2SQL: Natural Language to SQL Query Generator
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-LiveApp-ff4b4b?logo=streamlit)](https://aditi2306-nlp2sql-app-r0bk17.streamlit.app/)
-[![OpenAI](https://img.shields.io/badge/OpenAI-Powered-10a37f?logo=openai)](https://platform.openai.com/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT3.5-10a37f?logo=openai)](https://platform.openai.com/)
+[![LangChain](https://img.shields.io/badge/LangChain-Integrated-blueviolet)](https://www.langchain.com/)
 
-NLP2SQL is an interactive Streamlit-based application that translates natural language questions into executable SQL queries. It leverages OpenAI's GPT models and tools for intelligent query generation, table understanding, and result retrieval.
+
+NLP2SQL is an interactive Streamlit-based application that translates natural language questions into executable SQL queries. It leverages OpenAI's GPT models and Langchain tools for intelligent query generation, table understanding, and result retrieval.
 
 ---
 
@@ -33,7 +35,7 @@ import urllib
 params = urllib.parse.quote_plus(
     "DRIVER={ODBC Driver 17 for SQL Server};"
     "SERVER=LAPTOP-S9P3MUJN;"
-    "DATABASE=Northwind;"
+    "DATABASE=Northwind;" // We used northwind as demo
     "Trusted_Connection=yes"
 )
 
@@ -43,7 +45,7 @@ params = urllib.parse.quote_plus(
 
 NLP2SQL/
 ├── app.py                 # Main Streamlit application
-├── sql_generator.py       # NL to SQL logic
+├── langchain_gpt_sql.py   # NL to SQL logic using LangChain agents
 ├── requirements.txt       # Dependencies
 └── README.md              # Project documentation
 
